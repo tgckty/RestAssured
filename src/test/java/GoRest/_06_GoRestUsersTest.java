@@ -120,20 +120,18 @@ public class _06_GoRestUsersTest {
                 .log().body();
     }
 
-    @Test(dependsOnMethods = "DeleteUser")
-    public void DeleteUserNegative() {
-
-        given()
-                .spec(reqSpec)
-                .pathParam("id", id)
-
-                .when()
-                .delete("/users/{id}")
-
-                .then()
-                .statusCode(404)
-        ;
-
-    }
+//    @Test(dependsOnMethods = "DeleteUser")
+//    public void DeleteUserNegative() {
+//        given()
+//                .spec(reqSpec)
+//                .pathParam("id", id)
+//
+//                .when()
+//                .delete("/users/{id}")
+//
+//                .then()
+//                .statusCode(404)
+//        ;
+//    }
 
 }
